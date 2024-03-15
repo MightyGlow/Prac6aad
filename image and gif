@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter Image Demo'),
+        ),
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              Image.network(
+                  'https://c4.wallpaperflare.com/wallpaper/808/87/756/son-goku-dragon-ball-ultra-instinct-dragon-ball-super-white-hair-hd-wallpaper-preview.jpg',
+                  height: 400,
+                  width: 250),
+              Text(
+                'It is an image displays from the given url.',
+                style: TextStyle(fontSize: 20.0),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+'https://www.icegif.com/wp-content/uploads/2022/08/icegif-1298.gif'
