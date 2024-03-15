@@ -1,0 +1,19 @@
+show dbs
+use affan28
+db
+db.student.insert{(Name="Affan", Marks:95})
+db.student.show
+db.student.showtable
+db.dropDatabase()
+db.student.find()
+db.student.find().forEach(printjson)
+db.student.find().pretty()
+db.student.find({Name:"Affan"}).pretty()
+db.student.find({Marks:{$gt:80}).pretty()
+db.student.find({Marks:{$lt:80}).pretty()
+db.student.find({Marks:{$ne:95}).pretty()
+db.student.update({Marks:95},{$set:Marks:97}})
+db.student.remove({Name:"Affan"})
+db.student.remove({})
+db.student.find({},{Name:"Affan",id_0}).sort({})
+
